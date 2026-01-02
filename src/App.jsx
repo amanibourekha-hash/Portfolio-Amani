@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Home from './components/Home/Home';
-import Projets from './components/Projets/Projets';
-import Competences from './components/Competences/Competences';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
-import Learning from './components/Learning/Learning';
+import Navbar from './Components/Navbar/Navbar';
+import Home from './Components/Home/Home';
+import Projets from './Components/Projets/Projets';
+import Competences from './Components/Competences/Competences';
+import Contact from './Components/Contact/Contact';
+import Footer from './Components/Footer/Footer';
+import Learning from './Components/Learning/Learning';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
