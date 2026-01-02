@@ -12,7 +12,7 @@ const Home = ({ scrollToSection }) => {
 
   const fullText = "1|🚀 Je transforme des idées 💡 en applications Web 💻 et Mobiles 📱2| élégantes ✨ grâce au développement Full-Stack 🗄️";
 
-  // Curseur personnalisé + parallax + rotation des rôles
+  
   useEffect(() => {
     const handleMouseMove = (e) => setMousePosition({ x: e.clientX, y: e.clientY });
     const handleScroll = () => setScrollY(window.scrollY);
