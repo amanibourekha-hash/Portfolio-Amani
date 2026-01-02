@@ -30,8 +30,6 @@ const Navbar = ({ scrollToSection, activeSection }) => {
           </button>
         ))}
       </div>
-
-      {/* Hamburger Button (visible seulement sur mobile) */}
       <button
         className={`${styles.hamburger} ${isOpen ? styles.active : ''}`}
         onClick={toggleMenu}

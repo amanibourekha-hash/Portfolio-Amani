@@ -143,7 +143,6 @@
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* ====================== RESPONSIVE ====================== */
 /* Tablette et mobile : affichage du hamburger + menu plein écran */
 @media (max-width: 768px) {
   .hamburger {

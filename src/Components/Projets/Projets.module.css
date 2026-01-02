@@ -125,7 +125,7 @@
 
 /* Description du projet */
 .projectCard p {
-  color: #fff; /* Correction de #ffff → #fff */
+  color: #fff; 
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }

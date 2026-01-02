@@ -4,9 +4,9 @@ const projectsData = [
     title: "Lab 3: Node.js & NPM",
     description: "Ce lab a été réalisé avec Node.js, JavaScript, le module fs de Node, et NPM, offrant une initiation pratique à l'environnement runtime JavaScript côté serveur, à la gestion de modules et à la manipulation de fichiers.",
     tech: ["Node", "NPM"],
-    github: "https://github.com/wissal17/Lab3_Laaziz_Bourekha_G3", // Mets ton vrai lien GitHub
+    github: "https://github.com/wissal17/Lab3_Laaziz_Bourekha_G3", 
     //demo: "https://todo-app-demo.example.com", 
-    image: "node.png", // Nom du fichier dans src/assets/
+    image: "node.png", 
     date: "7 November 2025"
   },
   {

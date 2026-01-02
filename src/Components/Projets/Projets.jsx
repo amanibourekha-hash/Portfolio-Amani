@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './Projets.module.css';
 import projectsData from '../../data/projectsData'; 
 
-// Import des images (tu peux aussi les importer dynamiquement si tu veux)
 import todoImg from '../../assets/todo.jpg';
 import weatherImg from '../../assets/weather.jpg';
 import ecommerceImg from '../../assets/ecommerce.jpg';
@@ -11,7 +10,7 @@ import jestImg from '../../assets/jest.png';
 import nodeImg from '../../assets/node.png';
 import kanbanImg from '../../assets/kanban.png';
 
-// Mappe les images pour éviter les erreurs
+
 const images = {
   'node.png': nodeImg,
   'jest.png': jestImg,
