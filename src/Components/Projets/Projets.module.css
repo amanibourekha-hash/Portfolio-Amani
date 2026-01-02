@@ -1,0 +1,144 @@
+.projects {
+  min-height: 100vh;
+  padding: 6rem 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #7e76e9;
+}
+
+.titleNumber {
+  color: #7e76e9;
+  font-size: 2rem;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.projectCard {
+  background: rgba(26, 31, 58, 0.6);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  min-height: 350px;
+}
+
+.projectImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.projectOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.8), rgba(123, 47, 247, 0.8));
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.projectContent {
+  position: relative;
+  z-index: 3;
+}
+
+.projectCard:hover .projectImage {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+.projectCard:hover .projectOverlay {
+  opacity: 0.7;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  border-color: #00d9ff;
+  box-shadow: 0 20px 40px rgba(0, 217, 255, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.cardIcon {
+  font-size: 2.5rem;
+}
+
+.cardLinks a {
+  color: #b0b0b0;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.cardLinks a:hover {
+  color: #00d9ff;
+  transform: scale(1.2);
+}
+
+.projectCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #00d9ff;
+}
+
+.projectCard p {
+  color: #ffff;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.techStackBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.techBadge {
+  background: rgba(0, 217, 255, 0.1);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #00d9ff;
+}
+
+.projectDate {
+  font-size: 0.9rem;
+  color: #00d9ff;
+  font-weight: 500;
+  margin: 1rem 0 1.5rem;
+  opacity: 0.9;
+}

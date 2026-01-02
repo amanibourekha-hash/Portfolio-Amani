@@ -1,0 +1,42 @@
+.footer {
+  background: rgba(10, 14, 39, 0.9);
+  padding: 3rem 5% 2rem; /* Un peu plus de padding en haut pour la phrase */
+  text-align: center;
+  border-top: 1px solid rgba(0, 217, 255, 0.1);
+}
+
+/* Phrase inspirante */
+.quote {
+  font-size: 1.1rem;
+  color: #00d9ff;
+  font-style: italic;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+  padding: 0 1rem;
+}
+
+/* Signature */
+.signature {
+  color: #b0b0b0;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #808080;
+  margin-top: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quote {
+    font-size: 1rem;
+    padding: 0 2rem;
+  }
+
+  .footer {
+    padding: 2.5rem 5% 1.5rem;
+  }
+}
