@@ -1,24 +1,28 @@
 import React from 'react';
 import styles from './Projets.module.css';
-import projectsData from '../../data/projectsData'; // Import des données
+import projectsData from '../../data/projectsData'; 
 
 // Import des images (tu peux aussi les importer dynamiquement si tu veux)
 import todoImg from '../../assets/todo.jpg';
-import kanbanImg from '../../assets/kanban.jpg';
 import weatherImg from '../../assets/weather.jpg';
 import ecommerceImg from '../../assets/ecommerce.jpg';
+import reactImg from '../../assets/react.png';
+import jestImg from '../../assets/jest.png';
+import nodeImg from '../../assets/node.png';
+import kanbanImg from '../../assets/kanban.png';
 
 // Mappe les images pour éviter les erreurs
 const images = {
-  'todo.jpg': todoImg,
-  'kanban.jpg': kanbanImg,
-  'weather.jpg': weatherImg,
+  'node.png': nodeImg,
+  'jest.png': jestImg,
+  'react.png': reactImg,
+  'kanban.png': kanbanImg,
   'ecommerce.jpg': ecommerceImg
 };
 
 const Projets = () => {
   return (
-    <section id="projects" className={styles.projects}>
+    <section id="Projets" className={styles.projects}>
       <h2 className={styles.sectionTitle}>
         <span className={styles.titleNumber}>01.</span> Mes Projets
       </h2>
@@ -46,8 +50,6 @@ const Projets = () => {
               </div>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              
-              {/* Ajout de la date du projet */}
               <p className={styles.projectDate}>{project.date}</p>
 
               <div className={styles.techStackBadges}>

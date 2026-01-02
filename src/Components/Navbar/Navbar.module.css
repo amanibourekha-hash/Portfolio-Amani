@@ -1,6 +1,8 @@
+/* Barre de navigation fixe en haut de page */
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -15,17 +17,26 @@
   transition: background 0.4s ease;
 }
 
+/* Effet au scroll : fond semi-transparent + blur renforcé */
 .navbar.scrolled {
   background: rgba(10, 14, 39, 0.7);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 }
 
+/* Animation d'apparition depuis le haut au chargement de la page */
 @keyframes slideDown {
-  from { transform: translateY(-100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
+/* ====================== LOGO ====================== */
 .logo {
   display: flex;
   align-items: center;
@@ -41,16 +52,21 @@
   animation: pulse 2s ease-in-out infinite;
 }
 
+/* Pulsation subtile du symbole du logo */
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 .logoText {
   display: inline;
 }
 
-/* Menu Desktop */
+/* ====================== LIENS DE NAVIGATION (DESKTOP) ====================== */
 .navLinks {
   display: flex;
   gap: 2rem;
@@ -69,6 +85,7 @@
   font-weight: 500;
 }
 
+/* Soulignement animé sous les liens */
 .navLinks button::after {
   content: '';
   position: absolute;
@@ -91,9 +108,9 @@
   width: 100%;
 }
 
-/* Hamburger Menu */
+/* ====================== MENU HAMBURGER (MOBILE) ====================== */
 .hamburger {
-  display: none;
+  display: none; /* Visible uniquement sur mobile via media query */
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -113,6 +130,7 @@
   transition: all 0.3s ease;
 }
 
+/* Transformation en croix quand le menu est ouvert */
 .hamburger.active span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
@@ -125,7 +143,8 @@
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Responsive */
+/* ====================== RESPONSIVE ====================== */
+/* Tablette et mobile : affichage du hamburger + menu plein écran */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -139,6 +158,7 @@
     height: 100vh;
     background: rgba(10, 14, 39, 0.95);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -150,6 +170,7 @@
     pointer-events: none;
   }
 
+  /* État ouvert du menu mobile */
   .navLinks.open {
     transform: translateY(0);
     opacity: 1;
@@ -163,10 +184,11 @@
   }
 
   .navLinks button::after {
-    height: 3px;
+    height: 3px; /* Soulignement plus épais sur mobile */
   }
 }
 
+/* Petit mobile : ajustement du logo et des textes */
 @media (max-width: 480px) {
   .logo {
     font-size: 1.3rem;

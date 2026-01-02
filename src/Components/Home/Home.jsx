@@ -8,9 +8,9 @@ const Home = ({ scrollToSection }) => {
   const [typedText, setTypedText] = useState('');
   const [isTypingComplete, setIsTypingComplete] = useState(false);
 
-  const roles = ['Full Stack', 'Frontend', 'Backend', 'Data BASE'];
+  const roles = ['Full Stack', 'Frontend', 'Backend', 'Data BASE '];
 
-  const fullText = "1|🚀 Je transforme des idées 💡 en applications Web 💻 et Mobiles 📱2| élégantes ✨ grâce au développement Full-Stack 🗄️";
+  const fullText = " 🚀 Je transforme des idées 💡 en applications Web 💻 et Mobiles 📱 élégantes ✨ grâce au développement Full-Stack 🗄️";
 
   
   useEffect(() => {
@@ -31,10 +31,10 @@ const Home = ({ scrollToSection }) => {
     };
   }, []);
 
-  // Effet typewriter ultra fluide avec curseur qui suit parfaitement
+  
   useEffect(() => {
     let index = 0;
-    const typingSpeed = 50; // Vitesse d'écriture (ajuste si tu veux plus rapide/lent)
+    const typingSpeed = 50;
 
     const typingInterval = setInterval(() => {
       if (index <= fullText.length) {
@@ -52,7 +52,7 @@ const Home = ({ scrollToSection }) => {
   const cvLink = "/cv/CV-BOUREKHA_Amani.pdf"; 
 
   return (
-    <section id="home" className={styles.home}>
+    <section id="Accueil" className={styles.home}>
       <div className={styles.cursor} style={{ left: `${mousePosition.x}px`, top: `${mousePosition.y}px` }} />
 
       <div className={styles.bgBlobs}>
@@ -99,11 +99,9 @@ const Home = ({ scrollToSection }) => {
               ))}
             </div>
 
-            {/* Typewriter avec curseur qui suit parfaitement */}
             <div className={styles.typewriterContainer}>
               <p className={styles.typewriter}>
                 {typedText}
-                {/* Le curseur clignote toujours pendant l'écriture, et reste à la fin */}
                 <span className={`${styles.typingCursor} ${isTypingComplete ? styles.cursorEnd : ''}`}>|</span>
               </p>
             </div>
@@ -116,7 +114,6 @@ const Home = ({ scrollToSection }) => {
               <button className={styles.secondaryBtn} onClick={() => scrollToSection('contact')}>
                 Me Contacter
               </button>
-              {/* Nouveau bouton CV ajouté ici */}
               <a href={cvLink} download className={styles.cvButton}>
                 <span>Télécharger CV</span>
                 <span className={styles.cvArrow}>↓</span>
@@ -127,7 +124,6 @@ const Home = ({ scrollToSection }) => {
               <a href="https://github.com/amanibourekha-hash" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>💻</a>
               <a href="https://www.linkedin.com/in/amani-bourekha-5278a8395" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>💼</a>
               <a href="mailto:amani.bourekha@univ-constantine2.dz" className={styles.socialLink}>📧</a>
-              {/* Option : Ajouter un lien CV ici aussi si tu veux, avec icon 📄 */}
               <a href={cvLink} download className={styles.socialLink}>📄</a>
             </div>
           </div>

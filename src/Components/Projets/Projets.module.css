@@ -7,6 +7,7 @@
   z-index: 1;
 }
 
+/* Titre de section commun à plusieurs pages */
 .sectionTitle {
   font-size: 2.5rem;
   margin-bottom: 3rem;
@@ -21,12 +22,14 @@
   font-size: 2rem;
 }
 
+/* Grille responsive : ajuste automatiquement le nombre de colonnes */
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
 }
 
+/* Carte principale avec effet verre givré */
 .projectCard {
   background: rgba(26, 31, 58, 0.6);
   border: 1px solid rgba(0, 217, 255, 0.2);
@@ -40,6 +43,7 @@
   min-height: 350px;
 }
 
+/* Image de fond qui apparaît au hover */
 .projectImage {
   position: absolute;
   top: 0;
@@ -53,6 +57,7 @@
   z-index: 1;
 }
 
+/* Overlay dégradé qui assombrit l'image au hover */
 .projectOverlay {
   position: absolute;
   top: 0;
@@ -65,9 +70,17 @@
   z-index: 2;
 }
 
+/* Contenu texte toujours visible par-dessus l'image/overlay */
 .projectContent {
   position: relative;
   z-index: 3;
+}
+
+/* Effets au survol de la carte */
+.projectCard:hover {
+  transform: translateY(-10px);
+  border-color: #00d9ff;
+  box-shadow: 0 20px 40px rgba(0, 217, 255, 0.3);
 }
 
 .projectCard:hover .projectImage {
@@ -77,12 +90,6 @@
 
 .projectCard:hover .projectOverlay {
   opacity: 0.7;
-}
-
-.projectCard:hover {
-  transform: translateY(-10px);
-  border-color: #00d9ff;
-  box-shadow: 0 20px 40px rgba(0, 217, 255, 0.3);
 }
 
 .cardHeader {
@@ -96,6 +103,7 @@
   font-size: 2.5rem;
 }
 
+/* Liens GitHub / Live (icônes) */
 .cardLinks a {
   color: #b0b0b0;
   font-size: 1.5rem;
@@ -108,18 +116,21 @@
   transform: scale(1.2);
 }
 
+/* Titre du projet */
 .projectCard h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #00d9ff;
 }
 
+/* Description du projet */
 .projectCard p {
-  color: #ffff;
+  color: #fff; /* Correction de #ffff → #fff */
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
+/* ====================== BADGES TECHNOS ====================== */
 .techStackBadges {
   display: flex;
   flex-wrap: wrap;
@@ -135,6 +146,7 @@
   color: #00d9ff;
 }
 
+/* Date du projet */
 .projectDate {
   font-size: 0.9rem;
   color: #00d9ff;

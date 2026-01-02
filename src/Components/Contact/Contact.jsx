@@ -27,7 +27,7 @@ const Contact = () => {
 
   
   return (
-    <section id="contact" className={styles.contact}>
+    <section id="Contact" className={styles.contact}>
       <h2 className={styles.sectionTitle}>
         <span className={styles.titleNumber}>03.</span> Contact
       </h2>
@@ -36,9 +36,6 @@ const Contact = () => {
         <div className={styles.contactInfo}>
           <h3>Restons en Contact ! 🚀</h3>
           <p>Vous avez un projet en tête ? N'hésitez pas à me contacter. Je suis toujours ouvert aux nouvelles opportunités.</p>
-
-          {/* Bouton Télécharger CV */}
-         
 
           <div className={styles.contactLinks}>
             <a href="mailto:amani.bourekha@univ-constantine2.dz" className={styles.contactLink}>
@@ -65,7 +62,6 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Chat Prompt & Interface */}
       {!chatOpen && (
         <div className={styles.chatPrompt} onClick={() => setChatOpen(true)}>
           <span>Contactez-moi ici</span>

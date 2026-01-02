@@ -50,7 +50,7 @@ const Learning = () => {
   ];
 
   return (
-    <section id="learning" className={styles.learning}>
+    <section id="Apprentissage" className={styles.learning}>
       <h2 className={styles.sectionTitle}>
         <span className={styles.titleNumber}>04.</span> Mon Parcours d'Apprentissage
       </h2>

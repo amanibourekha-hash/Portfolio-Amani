@@ -1,3 +1,8 @@
+/* ============================================================= */
+/* Learning.module.css - Version optimisée et sans répétitions  */
+/* ============================================================= */
+
+/* ====================== SECTION PRINCIPALE ====================== */
 .learning {
   min-height: 100vh;
   padding: 6rem 5%;
@@ -7,6 +12,7 @@
   z-index: 1;
 }
 
+/* Titre de section commun */
 .sectionTitle {
   font-size: 2.5rem;
   margin-bottom: 4rem;
@@ -21,11 +27,13 @@
   font-size: 2rem;
 }
 
+/* ====================== TIMELINE ====================== */
 .timeline {
   position: relative;
   padding-left: 3rem;
 }
 
+/* Ligne verticale centrale de la timeline */
 .timeline::before {
   content: '';
   position: absolute;
@@ -37,13 +45,23 @@
   border-radius: 2px;
 }
 
+/* Chaque étape de la timeline */
 .timelineItem {
   position: relative;
   margin-bottom: 4rem;
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.8s ease-out forwards;
 }
 
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Point sur la ligne verticale */
 .timelineDot {
   position: absolute;
   left: -2.3rem;
@@ -56,6 +74,7 @@
   box-shadow: 0 0 20px rgba(0, 217, 255, 0.6);
 }
 
+/* Contenu de chaque étape */
 .timelineContent {
   background: rgba(26, 31, 58, 0.6);
   border: 1px solid rgba(0, 217, 255, 0.2);
@@ -71,31 +90,45 @@
   box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
 }
 
+/* En-tête amélioré de chaque étape */
 .stepHeader {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
+  justify-content: flex-start;
+  gap: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .stepNumber {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 800;
   color: #00d9ff;
+  min-width: 60px;
+  text-align: center;
+  background: rgba(0, 217, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  border: 2px solid #00d9ff;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
 }
 
 .stepHeader h3 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: #e0e0e0;
   margin: 0;
+  flex: 1; /* Prend tout l'espace restant */
 }
 
 .period {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #7b2ff7;
-  font-weight: 500;
-  margin-left: auto;
+  font-weight: 600;
+  background: rgba(123, 47, 247, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(123, 47, 247, 0.3);
+  white-space: nowrap;
 }
 
 .description {
@@ -104,6 +137,7 @@
   margin-bottom: 1.5rem;
 }
 
+/* Tags de ressources */
 .resources {
   margin-top: 1rem;
 }
@@ -130,7 +164,7 @@
   color: #00d9ff;
 }
 
-/* Ressources favorites */
+/* ====================== RESSOURCES FAVORITES ====================== */
 .resourcesSection {
   margin-top: 6rem;
   text-align: center;
@@ -187,7 +221,7 @@
   transform: translateX(5px);
 }
 
-/* Message final */
+/* ====================== MESSAGE FINAL ====================== */
 .finalMessage {
   margin-top: 6rem;
   text-align: center;
@@ -208,7 +242,7 @@
   color: #00d9ff;
 }
 
-/* Responsive */
+/* ====================== RESPONSIVE ====================== */
 @media (max-width: 768px) {
   .timeline {
     padding-left: 2rem;
@@ -225,67 +259,6 @@
   .stepHeader {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .period {
-    margin-left: 0;
-  }
-
-  .resourcesGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-
-/* Amélioration de l'en-tête des étapes */
-.stepHeader {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1.5rem; /* Plus d'espace entre les éléments */
-  margin-bottom: 1rem;
-}
-
-.stepNumber {
-  font-size: 2.2rem; /* Plus grand pour bien le voir */
-  font-weight: 800;
-  color: #00d9ff;
-  min-width: 60px; /* Force une largeur fixe pour alignement parfait */
-  text-align: center;
-  background: rgba(0, 217, 255, 0.1);
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-  border: 2px solid #00d9ff;
-  box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
-}
-
-.stepHeader h3 {
-  font-size: 1.7rem;
-  color: #e0e0e0;
-  margin: 0;
-  flex: 1; /* Prend l'espace disponible */
-}
-
-.period {
-  font-size: 1.1rem;
-  color: #7b2ff7;
-  font-weight: 600;
-  background: rgba(123, 47, 247, 0.1);
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  border: 1px solid rgba(123, 47, 247, 0.3);
-  white-space: nowrap;
-}
-
-/* Responsive : sur mobile, on passe en colonne pour plus de clarté */
-@media (max-width: 768px) {
-  .stepHeader {
-    flex-direction: column;
-    align-items: flex-start;
     gap: 1rem;
   }
 
@@ -296,18 +269,22 @@
 
   .period {
     align-self: flex-start;
+    margin-left: 0;
+  }
+
+  .resourcesGrid {
+    grid-template-columns: 1fr;
   }
 }
 
-.timelineItem {
-  opacity: 0;
-  transform: translateX(-50px);
-  animation: slideInLeft 0.8s ease-out forwards;
-}
-
-@keyframes slideInLeft {
+/* Animation d'entrée commune */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }

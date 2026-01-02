@@ -1,3 +1,4 @@
+/* Section Contact : hauteur minimale pleine écran avec padding fluide */
 .contact {
   min-height: 100vh;
   padding: 6rem 5%;
@@ -7,6 +8,7 @@
   z-index: 1;
 }
 
+/* Titre de section commun (utilisé aussi ailleurs dans le site) */
 .sectionTitle {
   font-size: 2.5rem;
   margin-bottom: 3rem;
@@ -21,6 +23,7 @@
   font-size: 2rem;
 }
 
+/* Contenu centré */
 .contactContent {
   max-width: 800px;
   margin: 0 auto;
@@ -40,6 +43,7 @@
   margin-bottom: 2rem;
 }
 
+/* Liens de contact (email, LinkedIn, etc.) */
 .contactLinks {
   display: flex;
   flex-direction: column;
@@ -70,6 +74,7 @@
   box-shadow: 0 10px 25px rgba(0, 217, 255, 0.2);
 }
 
+/* ====================== BOUTON CHAT FLOTTANT ====================== */
 .chatPrompt {
   position: fixed;
   bottom: 30px;
@@ -110,6 +115,7 @@
   50% { transform: translateX(5px); }
 }
 
+/* ====================== FENÊTRE DE CHAT ====================== */
 .chatContainer {
   position: fixed;
   bottom: 30px;
@@ -267,49 +273,8 @@
   box-shadow: 0 5px 15px rgba(0, 217, 255, 0.4);
 }
 
-/* Bouton Télécharger CV */
-.cvButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem 0;
-  padding: 1.2rem 2.5rem;
-  background: linear-gradient(135deg, #00d9ff, #7b2ff7);
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: all 0.4s ease;
-  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.4);
-  min-width: 280px;
-}
-
-.cvButton:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 20px 50px rgba(0, 217, 255, 0.6);
-}
-
-.cvArrow {
-  font-size: 1.6rem;
-  transition: transform 0.3s ease;
-}
-
-.cvButton:hover .cvArrow {
-  transform: translateY(5px);
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  .cvButton {
-    font-size: 1.1rem;
-    padding: 1rem 2rem;
-    min-width: 250px;
-  }
-}
-
-/* Media Queries pour Chat Responsive */
+/* ====================== RESPONSIVE ====================== */
+/* Tablette */
 @media (max-width: 768px) {
   .chatContainer {
     width: 90vw;
@@ -320,64 +285,33 @@
     margin: 0 auto;
   }
 
-  .chatHeader {
-    padding: 1.2rem;
-  }
-
-  .chatMessages {
-    padding: 1rem;
-  }
-
-  .message {
-    font-size: 0.9rem;
-    padding: 0.8rem;
-    max-width: 90%;
-  }
-
-  .chatInput {
-    padding: 1rem;
-  }
-
-  .messageInput {
-    font-size: 0.9rem;
-    padding: 0.7rem 1rem;
-  }
-
-  .sendButton {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
-  }
-
-  .chatPrompt {
-    bottom: 20px;
-    right: 20px;
-    padding: 0.8rem 1.2rem;
-    font-size: 1rem;
-  }
+  .chatHeader { padding: 1.2rem; }
+  .chatMessages { padding: 1rem; }
+  .message { font-size: 0.9rem; padding: 0.8rem; max-width: 90%; }
+  .chatInput { padding: 1rem; }
+  .messageInput { font-size: 0.9rem; padding: 0.7rem 1rem; }
+  .sendButton { width: 40px; height: 40px; font-size: 1rem; }
+  .chatPrompt { bottom: 20px; right: 20px; padding: 0.8rem 1.2rem; font-size: 1rem; }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
-  .contact {
-    padding: 4rem 3%;
-  }
+  .contact { padding: 4rem 3%; }
 
-  .sectionTitle {
-    font-size: 2rem;
-  }
-
-  .contactInfo h3 {
-    font-size: 1.8rem;
-  }
-
-  .contactInfo p {
-    font-size: 1rem;
-  }
+  .sectionTitle { font-size: 2rem; }
+  .contactInfo h3 { font-size: 1.8rem; }
+  .contactInfo p { font-size: 1rem; }
 
   .contactLink {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
     min-width: 90%;
+  }
+
+  .cvButton {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    min-width: 250px;
   }
 
   .chatContainer {
@@ -387,40 +321,17 @@
     border-radius: 15px;
   }
 
-  .chatHeader {
-    padding: 1rem;
-  }
+  .chatHeader { padding: 1rem; }
+  .statusDot { width: 10px; height: 10px; }
+  .closeChat { width: 25px; height: 25px; font-size: 1rem; }
+  .message { font-size: 0.85rem; padding: 0.7rem; }
+  .chatInput { padding: 0.8rem; }
+  .sendButton { width: 35px; height: 35px; font-size: 0.9rem; }
+  .chatPrompt { bottom: 15px; right: 15px; padding: 0.7rem 1rem; font-size: 0.9rem; }
+}
 
-  .statusDot {
-    width: 10px;
-    height: 10px;
-  }
-
-  .closeChat {
-    width: 25px;
-    height: 25px;
-    font-size: 1rem;
-  }
-
-  .message {
-    font-size: 0.85rem;
-    padding: 0.7rem;
-  }
-
-  .chatInput {
-    padding: 0.8rem;
-  }
-
-  .sendButton {
-    width: 35px;
-    height: 35px;
-    font-size: 0.9rem;
-  }
-
-  .chatPrompt {
-    bottom: 15px;
-    right: 15px;
-    padding: 0.7rem 1rem;
-    font-size: 0.9rem;
-  }
+/* Animation pulse commune */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
