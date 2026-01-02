@@ -20,7 +20,7 @@ const Navbar = ({ scrollToSection, activeSection }) => {
 
       {/* Menu Desktop */}
       <div className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}>
-        {['home', 'projects', 'skills', 'learning', 'contact'].map((section) => (
+        {['Accueil', 'Projets', 'Compétences', 'Apprentissage', 'Contact'].map((section) => (
           <button
             key={section}
             onClick={() => handleLinkClick(section)}
