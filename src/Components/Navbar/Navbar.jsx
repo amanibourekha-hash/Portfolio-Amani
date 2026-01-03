@@ -18,7 +18,6 @@ const Navbar = ({ scrollToSection, activeSection }) => {
         <span className={styles.logoText}>DevPortfolio</span>
       </div>
 
-      {/* Menu Desktop */}
       <div className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}>
         {['Accueil', 'Projets', 'Compétences', 'Apprentissage', 'Contact'].map((section) => (
           <button

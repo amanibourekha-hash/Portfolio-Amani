@@ -107,11 +107,11 @@ const Home = ({ scrollToSection }) => {
             </div>
 
             <div className={styles.ctaButtons}>
-              <button className={styles.primaryBtn} onClick={() => scrollToSection('projects')}>
+              <button className={styles.primaryBtn} onClick={() => scrollToSection('Projets')}>
                 <span>Voir Mes Projets</span>
                 <span className={styles.btnArrow}>→</span>
               </button>
-              <button className={styles.secondaryBtn} onClick={() => scrollToSection('contact')}>
+              <button className={styles.secondaryBtn} onClick={() => scrollToSection('Contact')}>
                 Me Contacter
               </button>
               <a href={cvLink} download className={styles.cvButton}>
