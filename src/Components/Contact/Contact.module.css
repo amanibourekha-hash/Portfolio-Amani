@@ -274,27 +274,8 @@
 }
 
 /* ====================== RESPONSIVE ====================== */
-/* Tablette */
-@media (max-width: 768px) {
-  .chatContainer {
-    width: 90vw;
-    height: 80vh;
-    bottom: 20px;
-    right: 5%;
-    left: 5%;
-    margin: 0 auto;
-  }
 
-  .chatHeader { padding: 1.2rem; }
-  .chatMessages { padding: 1rem; }
-  .message { font-size: 0.9rem; padding: 0.8rem; max-width: 90%; }
-  .chatInput { padding: 1rem; }
-  .messageInput { font-size: 0.9rem; padding: 0.7rem 1rem; }
-  .sendButton { width: 40px; height: 40px; font-size: 1rem; }
-  .chatPrompt { bottom: 20px; right: 20px; padding: 0.8rem 1.2rem; font-size: 1rem; }
-}
-
-/* Mobile */
+/* pour responseve ( Mobile)  */
 @media (max-width: 480px) {
   .contact { padding: 4rem 3%; }
 
@@ -328,10 +309,4 @@
   .chatInput { padding: 0.8rem; }
   .sendButton { width: 35px; height: 35px; font-size: 0.9rem; }
   .chatPrompt { bottom: 15px; right: 15px; padding: 0.7rem 1rem; font-size: 0.9rem; }
-}
-
-/* Animation pulse commune */
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
 }

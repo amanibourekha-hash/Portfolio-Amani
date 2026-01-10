@@ -44,7 +44,7 @@ const projectsData = [
     id: 5,
     title: "rw-accessoire25",
     description: "Site e-commerce complet pour vente d'accessoires avec panier, paiement simulé et admin.",
-    tech: ["HTML", "CSS", "PHP", "MySQL", "JavaScript"],
+    tech: ["HTML", "CSS", "JavaScript" ,  "PHP", "MySQL"],
     github: "https://github.com/wissal17/ecommerce",
     demo: "https://rw-accessoire25.byethost8.com",
     image: "ecommerce.jpg",

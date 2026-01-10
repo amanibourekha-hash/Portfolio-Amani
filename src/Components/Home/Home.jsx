@@ -146,13 +146,6 @@ const Home = ({ scrollToSection }) => {
           </div>
         </div>
       </div>
-
-      <div className={styles.scrollIndicator}>
-        <span className={styles.scrollText}>Scroll</span>
-        <div className={styles.scrollMouse}>
-          <div className={styles.scrollWheel}></div>
-        </div>
-      </div>
     </section>
   );
 };

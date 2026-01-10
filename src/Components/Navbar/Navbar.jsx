@@ -8,7 +8,7 @@ const Navbar = ({ scrollToSection, activeSection }) => {
 
   const handleLinkClick = (section) => {
     scrollToSection(section);
-    setIsOpen(false); // Ferme le menu mobile après clic
+    setIsOpen(false); // Fermeture de menu mobile après clic
   };
 
   return (

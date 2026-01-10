@@ -80,7 +80,7 @@
   }
 }
 
-/* ====================== STRUCTURE PRINCIPALE ====================== */
+/*  STRUCTURE PRINCIPALE  */
 .home {
   padding-top: 80px; /* Espace pour la navbar fixe */
   position: relative;
@@ -97,7 +97,7 @@
   align-items: center;
 }
 
-/* ====================== ACCUEIL TEXTE ====================== */
+/*  ACCUEIL TEXTE */
 .greeting {
   display: flex;
   align-items: center;
@@ -320,12 +320,6 @@
   transform: translateY(-3px);
 }
 
-/* Flèches animées (↓ pour CV, → pour primary) */
-.btnArrow,
-.cvArrow {
-  transition: transform 0.3s ease;
-}
-
 .primaryBtn:hover .btnArrow {
   transform: translateX(5px); /* Flèche vers la droite */
 }
@@ -363,7 +357,7 @@
   transform: scale(1.1);
 }
 
-/* ====================== PARTIE VISUELLE (CARTE 3D) ====================== */
+/*  PARTIE VISUELLE (CARTE 3D)  */
 .heroVisual {
   display: flex;
   justify-content: center;
@@ -455,85 +449,5 @@
   }
   66% {
     transform: translate(-10px, 10px) rotate(-5deg);
-  }
-}
-
-/* ====================== INDICATEUR DE SCROLL ====================== */
-.scrollIndicator {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  animation: bounce 2s ease-in-out infinite;
-  z-index: 2;
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-}
-
-.scrollText {
-  font-size: 0.9rem;
-  color: #b0b0b0;
-}
-
-.scrollMouse {
-  width: 24px;
-  height: 40px;
-  border: 2px solid rgba(0, 217, 255, 0.5);
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  padding-top: 8px;
-}
-
-.scrollWheel {
-  width: 3px;
-  height: 8px;
-  background: #00d9ff;
-  border-radius: 3px;
-  animation: scrollAnimation 1.5s ease-in-out infinite;
-}
-
-@keyframes scrollAnimation {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-}
-
-/* ====================== ANIMATIONS COMMUNES ====================== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
   }
 }

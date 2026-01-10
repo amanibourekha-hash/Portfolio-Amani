@@ -22,7 +22,7 @@
   font-size: 2rem;
 }
 
-/* ====================== TIMELINE ====================== */
+/*  ligne des étapsss */
 .timeline {
   position: relative;
   padding-left: 3rem;
@@ -159,7 +159,7 @@
   color: #00d9ff;
 }
 
-/* ====================== RESSOURCES FAVORITES ====================== */
+/* pour les rossources de mes éducation  */
 .resourcesSection {
   margin-top: 6rem;
   text-align: center;
@@ -269,17 +269,5 @@
 
   .resourcesGrid {
     grid-template-columns: 1fr;
-  }
-}
-
-/* Animation d'entrée commune */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
