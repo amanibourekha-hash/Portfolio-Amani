@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* ====================== CURSEUR PERSONNALISÉ ====================== */
+/* la souris*/
 .cursor {
   width: 20px;
   height: 20px;
@@ -22,7 +22,7 @@
   }
 }
 
-/* ====================== ARRIÈRE-PLAN ANIMÉ (BLOBS) ====================== */
+/* background */
 .bgBlobs {
   position: fixed;
   top: 0;
@@ -130,7 +130,7 @@
   background-clip: text;
 }
 
-/* Rôle qui change (Full Stack → Frontend → etc.) */
+/* Rôle qui change (Full Stack → Frontend , backend , BASE de donnée) */
 .roleContainer {
   display: flex;
   align-items: center;
@@ -251,7 +251,7 @@
   }
 }
 
-/* ====================== BOUTONS CTA (fusionnés) ====================== */
+/* BOUTONS CTA (fusionnés)  */
 .ctaButtons {
   display: flex;
   flex-wrap: wrap;

@@ -130,7 +130,7 @@
   margin-bottom: 1.5rem;
 }
 
-/* ====================== BADGES TECHNOS ====================== */
+/*  BADGES TECHNOS = */
 .techStackBadges {
   display: flex;
   flex-wrap: wrap;
@@ -153,4 +153,46 @@
   font-weight: 500;
   margin: 1rem 0 1.5rem;
   opacity: 0.9;
+}
+
+/*  filtrage(web , mobile) */
+.filterButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  background: rgba(0, 217, 255, 0.1);
+  border: 1px solid rgba(0, 217, 255, 0.4);
+  color: #00d9ff;
+  padding: 0.7rem 1.8rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterBtn:hover {
+  background: rgba(0, 217, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.filterBtn.active {
+  background: linear-gradient(135deg, #00d9ff, #7b2ff7);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+}
+
+/* Message quand aucun projet */
+.noProjects {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #b0b0b0;
+  margin-top: 4rem;
+  opacity: 0.8;
 }

@@ -24,5 +24,5 @@ code {
   min-height: 100vh;
 }
 
-/* Import Google Fonts (optionnel mais recommandé) */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');

@@ -1,39 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Projets.module.css';
-import projectsData from '../../data/projectsData'; 
+import projectsData from '../../data/projectsData';
 
-import todoImg from '../../assets/todo.jpg';
-import weatherImg from '../../assets/weather.jpg';
 import ecommerceImg from '../../assets/ecommerce.jpg';
 import reactImg from '../../assets/react.png';
 import jestImg from '../../assets/jest.png';
 import nodeImg from '../../assets/node.png';
 import kanbanImg from '../../assets/kanban.png';
 
-
 const images = {
   'node.png': nodeImg,
   'jest.png': jestImg,
   'react.png': reactImg,
   'kanban.png': kanbanImg,
-  'ecommerce.jpg': ecommerceImg
+  'ecommerce.jpg': ecommerceImg,
 };
 
 const Projets = () => {
+  const [filter, setFilter] = useState('tous'); // 'tous' | 'web' | 'mobile'
+
+  // On filtre les projets selon le bouton actif
+  const filteredProjects = projectsData.filter(project => {
+    if (filter === 'tous') return true;
+    return project.category === filter;
+  });
+
   return (
     <section id="Projets" className={styles.projects}>
       <h2 className={styles.sectionTitle}>
         <span className={styles.titleNumber}>01.</span> Mes Projets
       </h2>
+
+      {/* Boutons de filtrage */}
+      <div className={styles.filterButtons}>
+        <button
+          className={`${styles.filterBtn} ${filter === 'tous' ? styles.active : ''}`}
+          onClick={() => setFilter('tous')}
+        >
+          Tous
+        </button>
+        <button
+          className={`${styles.filterBtn} ${filter === 'web' ? styles.active : ''}`}
+          onClick={() => setFilter('web')}
+        >
+          Web
+        </button>
+        <button
+          className={`${styles.filterBtn} ${filter === 'mobile' ? styles.active : ''}`}
+          onClick={() => setFilter('mobile')}
+        >
+          Mobile
+        </button>
+      </div>
+
       <div className={styles.projectsGrid}>
-        {projectsData.map((project, index) => (
-          <div 
-            key={project.id} 
-            className={styles.projectCard} 
+        {filteredProjects.map((project, index) => (
+          <div
+            key={project.id}
+            className={styles.projectCard}
             style={{ animationDelay: `${index * 0.1}s` }}
           >
-            <div 
-              className={styles.projectImage} 
+            <div
+              className={styles.projectImage}
               style={{ backgroundImage: `url(${images[project.image]})` }}
             ></div>
             <div className={styles.projectOverlay}></div>
@@ -41,9 +69,13 @@ const Projets = () => {
               <div className={styles.cardHeader}>
                 <div className={styles.cardIcon}>📁</div>
                 <div className={styles.cardLinks}>
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">⚡</a>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    ⚡
+                  </a>
                   {project.demo && (
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">↗</a>
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      ↗
+                    </a>
                   )}
                 </div>
               </div>
@@ -53,13 +85,19 @@ const Projets = () => {
 
               <div className={styles.techStackBadges}>
                 {project.tech.map((tech, i) => (
-                  <span key={i} className={styles.techBadge}>{tech}</span>
+                  <span key={i} className={styles.techBadge}>
+                    {tech}
+                  </span>
                 ))}
               </div>
             </div>
           </div>
         ))}
       </div>
+
+      {filteredProjects.length === 0 && (
+        <p className={styles.noProjects}>Aucun projet dans cette catégorie pour le moment...</p>
+      )}
     </section>
   );
 };

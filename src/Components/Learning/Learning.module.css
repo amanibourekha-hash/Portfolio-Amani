@@ -216,7 +216,7 @@
   transform: translateX(5px);
 }
 
-/* ====================== MESSAGE FINAL ====================== */
+/*  MESSAGE FINAL */
 .finalMessage {
   margin-top: 6rem;
   text-align: center;
@@ -237,7 +237,7 @@
   color: #00d9ff;
 }
 
-/* ====================== RESPONSIVE ====================== */
+/*  responcev (mobile) */
 @media (max-width: 768px) {
   .timeline {
     padding-left: 2rem;
